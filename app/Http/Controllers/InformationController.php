@@ -28,11 +28,10 @@ class InformationController extends Controller
     public function update(Request $request,$id){
         $mangas = Manga::find($id);
         $mangas->name = $request->input('name');
-        $mangas->picture = $request->input('picture');
-        $id = $request->id;
-        $picture = $request->picture;
+        
             if($request->hasfile('picture')){
             $updatepicture = 'image/'.$mangas->picture;
+            
             if(File::exists($updatepicture))
             {
                 File::delete($updatepicture);
@@ -45,8 +44,8 @@ class InformationController extends Controller
             $mangas->update();
         }
         
-        
-        return redirect('Anipost/edit/'. $id)->with('alert', 'update successfully');
+        $mangas->update();
+        return redirect('Anipost/edit/'. $id)->with('alert', 'Update Successfully');
     }
    
 }

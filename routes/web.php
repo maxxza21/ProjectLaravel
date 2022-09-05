@@ -10,7 +10,7 @@ use App\Http\Controllers\InformationController;
 Route::get('Anipost/upload', [UploadController::class, 'upload'])->name('uploads');
 Route::get('Anipost/information', [InformationController::class, 'data']);
 // Route::get('Anipost/information', [InformationController::class, 'delete']);
-
+Route::get('Anipost/contact', [AnipostController::class, 'contact']);
 Route::post('Anipost/upload', [UploadController::class, 'addmanga']);
 Route::resource('Anipost', AnipostController::class);
 

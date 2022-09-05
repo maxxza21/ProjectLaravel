@@ -33,6 +33,6 @@ class UploadController extends Controller
     }
     
     $picture->save();
-  return redirect()->back()->with('status', 'Successful');
+  return redirect()->back()->with('status', 'Upload Successful');
   }
 }

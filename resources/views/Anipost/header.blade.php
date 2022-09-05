@@ -16,7 +16,7 @@
                 <li><a href="#">About</a></li>
                 <li><a href="{{url('/Anipost/information')}}">Information</a></li>
                 <li><a href="{{ route('uploads')}}">Upload</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="{{url('/Anipost/contact')}}">Contact</a></li>
             </ul>
         </div>
 
@@ -40,3 +40,4 @@
         </div>
     </div>
 </nav>
+<script src="{{url('js/header.js')}}"></script>

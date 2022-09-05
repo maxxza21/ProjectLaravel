@@ -25,6 +25,11 @@ class AnipostController extends Controller
    public function redirects(){
     return redirect()->to('Anipost.information')->send();
    }
+
+   // contact page
+   public function contact(){
+    return view('Anipost.contact');
+   }
  
 }
 
