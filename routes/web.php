@@ -37,7 +37,7 @@ Route::get('test', [UploadController::class, 'addmanga']);
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [AnipostController::class, 'redirect']);
+// Route::get('/Anipost', function () {
+//     return view('Anipost');
+// });

@@ -30,6 +30,11 @@ class AnipostController extends Controller
    public function contact(){
     return view('Anipost.contact');
    }
+
+   // redirect
+   public function redirect(){
+    return redirect('Anipost');
+   }
  
 }
 
