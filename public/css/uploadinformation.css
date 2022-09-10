@@ -47,15 +47,14 @@
     section{
         width: 1000px;
         height:auto;
-        margin: 47px auto;
-       
+        margin: 100px auto;
+        box-shadow: 7px 7px 60px #000;
     }
     form{
         width: 96%;
         height: 100%;
         margin: auto;
-        padding: 5px 20px;
-        box-shadow: 7px 7px 60px #000;
+        padding: 20px;
     }
     form>p{
         padding: 10px 5px;

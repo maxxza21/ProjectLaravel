@@ -13,11 +13,14 @@ Route::get('Anipost/information', [InformationController::class, 'data']);
 // Route::get('Anipost/information', [InformationController::class, 'delete']);
 Route::get('Anipost/contact', [AnipostController::class, 'contact']);
 Route::post('Anipost/upload', [UploadController::class, 'addmanga']);
-Route::get('Anipost/{name}', [AnipostController::class, 'detail'])->name('Anipost.show');
+Route::get('Anipost/uploadinformation', [UploadController::class, 'infor'])->name('information');
+Route::get('Anipost/comic/{id}', [AnimedetailController::class, 'detail'])->name('Anipost.show');
+Route::get('Anipost/comic/{id}', [AnimedetailController::class, 'title']);
 Route::resource('Anipost', AnipostController::class);
 
 // edit
 Route::get('Anipost/edit/{id}', [InformationController::class, 'edit']);
+// Route::get('Anipost/edit/{id}', [AnimedetailController::class, 'edit']);
 
 //update
 Route::put('Anipost/update/{id}', [InformationController::class, 'update']);

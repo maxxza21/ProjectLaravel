@@ -28,9 +28,15 @@ class InformationController extends Controller
     public function update(Request $request,$id){
         $mangas = Manga::find($id);
         $mangas->name = $request->input('name');
+        $mangas->secondname = $request->input('secondname');
+        $mangas->author = $request->input('author');
+        $mangas->website = $request->input('website');
+        $mangas->synopsis = $request->input('synopsis');
+        $mangas->artist = $request->input('artist');
         
             if($request->hasfile('picture')){
             $updatepicture = 'image/'.$mangas->picture;
+            
             
             if(File::exists($updatepicture))
             {

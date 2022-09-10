@@ -1,0 +1,75 @@
+body{
+    font-family: "Trirong", serif !important;
+    font-size: .9rem;
+    font-weight: 400;
+}
+a{
+    text-decoration: none;
+}
+.box-left.anime{
+    max-width: 230px;
+    display: inline-block;
+    padding-right: 1em;
+}
+.pictureanime{
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+.p-2{
+    padding: 0.5rem!important;
+}
+.card{
+    position: relative;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #2b2e3b;
+    background-clip: border-box;
+    border: 0 solid #343747;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4pxrgba(15,34,58,.12);
+}
+/* right content */
+.box-right{
+    width: calc(100% - 330px - 1em);
+    display: inline-block;
+    vertical-align: top;
+}
+.text-information{
+    color: #9295a4;
+}
+.mt-2{
+    margin-top: 0.5rem!important;
+}
+.table{
+    border-color: #343747;
+}
+.bg-gradient-secondary{
+    background: linear-gradient(to bottom,#c3cbe4,rgba(195,203,228,.5))!important;
+    border-radius: 0.25rem!important;
+    margin-top: 20px;
+}
+.bg-gradient-light{
+    background: linear-gradient(to bottom,#343747,rgba(52,55,71,.5))!important;
+}
+.chapter{
+    color: #1abc9c!important;
+}
+.chapter-name{
+    color: rgb(221, 225, 230)!important;
+}
+.chapter-title{
+    color: #f6f6f6;
+}
+.bg-light{
+    background-color: #343747!important;
+    color: #9295a4;
+}
+.contributor{
+    color: #f6f6f6;
+}

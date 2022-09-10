@@ -21,7 +21,12 @@ class UploadController extends Controller
   public function addmanga(Request $request){
     $picture = new Manga;
     $picture->name = $request->input('name');
+    $picture->secondname = $request->input('secondname');
     $picture->picture = $request->input('picture');
+    $picture->author = $request->input('author');
+    $picture->artist = $request->input('artist');
+    $picture->website = $request->input('website');
+    $picture->synopsis = $request->input('synopsis');
     if($request->hasfile('picture')){
         $file = $request->file('picture');
         $extension = $file->getClientOriginalExtension();
@@ -34,5 +39,10 @@ class UploadController extends Controller
     
     $picture->save();
   return redirect()->back()->with('status', 'Upload Successful');
+  }
+
+  // informationanime
+  public function infor(){
+    return view('Anipost.informationanime');
   }
 }

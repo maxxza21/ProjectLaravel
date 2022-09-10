@@ -22,7 +22,7 @@
              @foreach ($mangas as $item)
              
                     <div class="px-1 col-4 col-md-3 col-lg-2">
-                        <a href='{{ url("Anipost/".Str::slug("$item->name", "_"))}}'>
+                        <a href='{{ url("Anipost/comic/".$item->id)}}'>
                         <img class="contentpic" src="{{asset('image/'.$item->picture)}}" alt="">
                         <div class="mb-0 pt-2 textbg">
                             <p style="margin-left: 11px;"> {{$item->name}}</p>

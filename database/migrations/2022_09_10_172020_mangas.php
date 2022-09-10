@@ -1,3 +1,5 @@
+nes (30 sloc)  645 Bytes
+
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -16,7 +18,13 @@ return new class extends Migration
         Schema::create('mangas', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('secondname')->nullable();
             $table->string('picture');
+            $table->string('author')->nullable();
+            $table->string('artist')->nullable();
+            $table->string('status')->nullable();
+            $table->string('website')->nullable();
+            $table->string('synopsis')->nullable();
             $table->timestamps();
         });
     }

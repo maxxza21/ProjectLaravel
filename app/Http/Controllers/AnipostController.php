@@ -10,7 +10,7 @@ class AnipostController extends Controller
 {
     // index
     public function index(){
-        $data['mangas'] = Manga::orderBy('id', 'asc')->paginate(12);
+        $data['mangas'] = Manga::orderBy('id', 'desc')->paginate(12);
         // $data = Manga::all();
         return view('Anipost.index', $data);
     }

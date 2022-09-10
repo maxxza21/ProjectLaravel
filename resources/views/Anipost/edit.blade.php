@@ -34,12 +34,40 @@
                 <p class="text">Title Name</p>
                 <input type="text" class="form-control" name="name" value="{{$mangas->name}}">
             </div>
+            <div class="form-group">
+                <p class="text">Second Name</p>
+                <input type="text" class="form-control" name="secondname" value="{{$mangas->secondname}}">
+            </div>
+            <div class="form-group">
+                <p class="text">
+                    Author</p>
+                <input type="text" class="form-control" name="author" value="{{$mangas->author}}">
+            </div>
+            <div class="form-group">
+                <p class="text">Artist</p>
+                <input type="text" class="form-control" name="artist" value="{{$mangas->artist}}">
+            </div>
+            <div class="form-group">
+                <p class="text">Status</p>
+     
+                <input  type="radio" name="status">On Going
+                <input style="margin-left: 10px;" type="radio" name="status">Closed
+   
+            </div>
+            <div class="form-group">
+                <p class="text">Website(URL)</p>
+                <input type="text" class="form-control" name="website" value="{{$mangas->website}}">
+            </div>
+            <div class="form-group">
+                <p class="text">Synopsis</p>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" type="text" name="synopsis" value="{{$mangas->synopsis}}"></textarea>
+            </div>
         <p>Upload file</p>
         <div>
             <input type="file" id="upload" name="picture" value="{{$mangas->picture}}" style="display: none;" >
             <label for="upload" value="{{$mangas->picture}}" >{{$mangas->picture}}</label>
         </div>
-        <button type="submit"><span>&#8682; Upload</span><span class="uploading">Upload.....</span></button>
+        <button type="submit"><span>&#8682; Update</span><span class="uploading">Upload.....</span></button>
         <button class="cancle">Cancle Upload</button>
         <div class="pr">
             <strong>

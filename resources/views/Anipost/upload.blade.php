@@ -27,12 +27,41 @@
                 <p class="text">Title Name</p>
                 <input type="text" class="form-control" name="name">
             </div>
+            <div class="form-group">
+                <p class="text">Second Name</p>
+                <input type="text" class="form-control" name="secondname">
+            </div>
+            <div class="form-group">
+                <p class="text">
+                    Author</p>
+                <input type="text" class="form-control" name="author">
+            </div>
+            <div class="form-group">
+                <p class="text">Artist</p>
+                <input type="text" class="form-control" name="artist">
+            </div>
+            <div class="form-group">
+                <p class="text">Status</p>
+     
+                <input  type="radio" name="status">On Going
+                <input style="margin-left: 10px;" type="radio" name="status">Closed
+   
+            </div>
+            <div class="form-group">
+                <p class="text">Website(URL)</p>
+                <input type="text" class="form-control" name="website">
+            </div>
+            <div class="form-group">
+                <p class="text">Synopsis</p>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" type="text" name="synopsis"></textarea>
+            </div>
         <p>Upload file</p>
         <div>
             <input type="file" id="upload" name="picture" style="display: none;">
             <label for="upload">Select Files</label>
         </div>
         <button type="submit"><span>&#8682; Upload</span><span class="uploading">Upload.....</span></button>
+        
         <button class="cancle">Cancle Upload</button>
         <div class="pr">
             <strong>
@@ -41,7 +70,7 @@
             </strong>
             <progress min="0" max="100" value="0"></progress>
             <span class="progress-indicator"></span>
-       
+            
         </div>
     </form>
     </section>
@@ -59,6 +88,7 @@
     </div>
     <button type="submit" class="btn btn-primary">เธเธฑเธเธ—เธถเธ</button>
 </form> --}}
+    
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="{{url('js/header.js')}}"></script>

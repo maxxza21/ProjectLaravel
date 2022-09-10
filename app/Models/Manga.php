@@ -12,5 +12,8 @@ class Manga extends Model
     protected $fillable = [
         'name',
         'picture',
+        'author',
+        'status',
+        'website',
     ];
 }
