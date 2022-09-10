@@ -20,7 +20,7 @@
                 <h2>Comic</h2>
                 <div class="row mt-2 px-2">
              @foreach ($mangas as $item)
-             
+             @if($item->status == "On Going")
                     <div class="px-1 col-4 col-md-3 col-lg-2">
                         <a href='{{ url("Anipost/comic/".$item->id)}}'>
                         <img class="contentpic" src="{{asset('image/'.$item->picture)}}" alt="">
@@ -30,6 +30,7 @@
                         </div>
                         </a>
                     </div>
+                    @endif
                     @endforeach
                     {!! $mangas->links('pagination::bootstrap-5') !!}
                

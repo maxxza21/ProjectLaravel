@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('picture');
             $table->string('author')->nullable();
             $table->string('artist')->nullable();
-            $table->string('status')->nullable();
+            $table->string('status');
             $table->string('website')->nullable();
             $table->string('synopsis')->nullable();
             $table->timestamps();

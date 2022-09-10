@@ -51,7 +51,7 @@
                                             </tr>
                                             <tr>
                                                 <td class="text-information">Status</td>
-                                                <td class="text-white text-right">On Going</td>
+                                                <td class="text-white text-right">{{$mangas->status}}</td>
                                                 <td class="text-information">Views</td>
                                                 <td class="text-white text-right">Coming soon</td>
                                             </tr>

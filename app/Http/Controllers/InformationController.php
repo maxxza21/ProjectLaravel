@@ -30,6 +30,7 @@ class InformationController extends Controller
         $mangas->name = $request->input('name');
         $mangas->secondname = $request->input('secondname');
         $mangas->author = $request->input('author');
+        $mangas->status = $request->input('status');
         $mangas->website = $request->input('website');
         $mangas->synopsis = $request->input('synopsis');
         $mangas->artist = $request->input('artist');

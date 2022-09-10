@@ -15,6 +15,7 @@
 <body>
     @include('Anipost.header')
     <h2 style="text-align: center; margin-top: 20px;">Upload Manga</h2>
+    <div class="container" style="height: 1000px;">
     <section>
         <form action="{{url('Anipost/upload')}}" method="POST" enctype="multipart/form-data">
             @csrf
@@ -26,6 +27,11 @@
             <div class="form-group">
                 <p class="text">Title Name</p>
                 <input type="text" class="form-control" name="name">
+                <div style="margin-top: 0;" class="text-danger">
+                @error('name')
+                    {{$message}}
+                @enderror
+                </div>
             </div>
             <div class="form-group">
                 <p class="text">Second Name</p>
@@ -40,12 +46,16 @@
                 <p class="text">Artist</p>
                 <input type="text" class="form-control" name="artist">
             </div>
-            <div class="form-group">
+            <div class="form-group" required>
                 <p class="text">Status</p>
-     
-                <input  type="radio" name="status">On Going
-                <input style="margin-left: 10px;" type="radio" name="status">Closed
-   
+        
+                    <input type="radio" class="form-check-input" name="status" value="On Going" {{old('status') == 'On Going' ? 'checked' : ''}}><span style="margin-left:5px;">On Going</span>
+                    <input style="margin-left: 10px;" class="form-check-input" type="radio" name="status" value="Closed" {{old('status') == 'Closed' ? 'checked' : ''}}><span style="margin-left:5px;">Closed</span>
+                    <div style="margin-top: 0;" class="text-danger">
+                    @error('status')
+                    {{$message}}
+                @enderror
+            </div>
             </div>
             <div class="form-group">
                 <p class="text">Website(URL)</p>
@@ -55,10 +65,16 @@
                 <p class="text">Synopsis</p>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" type="text" name="synopsis"></textarea>
             </div>
+            
         <p>Upload file</p>
         <div>
-            <input type="file" id="upload" name="picture" style="display: none;">
+            <input type="file" id="upload" name="picture" style="display: none;" >
             <label for="upload">Select Files</label>
+            <div style="margin-top: 0;" class="text-danger">
+                @error('picture')
+                {{$message}}
+            @enderror
+        </div>
         </div>
         <button type="submit"><span>&#8682; Upload</span><span class="uploading">Upload.....</span></button>
         
@@ -74,6 +90,7 @@
         </div>
     </form>
     </section>
+</div>
     {{-- <form action="{{url('Anipost/upload')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">

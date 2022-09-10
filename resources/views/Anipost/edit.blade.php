@@ -15,6 +15,7 @@
 <body>
     @include('Anipost.header')
     <h2 style="text-align: center; margin-top: 20px;">Edit Manga</h2>
+    <div class="container" style="height: 1000px;">
     <section>
        
           
@@ -49,9 +50,8 @@
             </div>
             <div class="form-group">
                 <p class="text">Status</p>
-     
-                <input  type="radio" name="status">On Going
-                <input style="margin-left: 10px;" type="radio" name="status">Closed
+                <input  type="radio" name="status" value="On Going" {{ ($mangas->status == "On Going") ? 'checked' : ''}}>On Going
+                <input style="margin-left: 10px;" type="radio" name="status" value="Closed" {{ ($mangas->status == "Closed") ? 'checked' : ''}}>Closed
    
             </div>
             <div class="form-group">
@@ -81,6 +81,7 @@
     </form>
   
     </section>
+    </div>
     {{-- <form action="{{url('Anipost/upload')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
