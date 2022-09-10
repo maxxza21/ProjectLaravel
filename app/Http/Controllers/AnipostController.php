@@ -35,6 +35,10 @@ class AnipostController extends Controller
    public function redirect(){
     return redirect('Anipost');
    }
+      // index detail
+      public function detail(){
+        return view('Anipost.animedetail');
+    }
  
 }
 

@@ -13,3 +13,6 @@
         line-height: 100%;
         padding-bottom: 3px;
     }
+    a{
+        text-decoration: none;
+    }

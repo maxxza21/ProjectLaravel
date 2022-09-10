@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AnipostController;
 use App\Http\Controllers\UploadController;
+use App\Http\Controllers\AnimedetailController;
 use App\Http\Controllers\InformationController;
 
 // page route
@@ -12,6 +13,7 @@ Route::get('Anipost/information', [InformationController::class, 'data']);
 // Route::get('Anipost/information', [InformationController::class, 'delete']);
 Route::get('Anipost/contact', [AnipostController::class, 'contact']);
 Route::post('Anipost/upload', [UploadController::class, 'addmanga']);
+Route::get('Anipost/{name}', [AnipostController::class, 'detail'])->name('Anipost.show');
 Route::resource('Anipost', AnipostController::class);
 
 // edit
