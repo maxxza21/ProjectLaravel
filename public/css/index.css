@@ -1,3 +1,46 @@
+:root{
+    --body-color: #fff;
+    --detail-color:#010718;
+    --topic-color:#fff;
+    --information-color:#9295a4;
+    --nav-color: #2e51a2;
+    --card-color: #2b2e3b;
+    --nav-bottom: #2e51a2;
+    --myanime-color:#dde1ec;
+    --widget-color:#2e51a2;
+    --side-nav: #010718;
+    --text-color: #FFF;
+    --search-bar: #F2F2F2;
+    --search-text: #010718;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--body-color) !important;
+    background-image: var(--body-color) !important;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+body.dark{
+    --body-color: url(../image/miku.jpg);
+    --detail-color: url(../image/girl.jpg);
+    --topic-color: black;
+    --information-color:black;
+    --card-color: 7px 7px 60px #000;
+    --nav-color: linear-gradient(-135deg,#87e5cf, #5a676b, #47c8c0, #ff629d, #55d1d0,#e2ddcc,#ff1688);
+    --boxshadow-color: 7px 7px 60px #000;
+    --myanime-color:#00BCD4;
+    --widget-color: 10px 10px 60px #000;
+    --nav-bottom: #00BCD4;
+    --side-nav: #242526;
+    --text-color: #ff9c00;
+    --search-bar: #87e5cf;
+}
+
+/* content */
+
+
 .mikupic{
         width: 100%;
     }

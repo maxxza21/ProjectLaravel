@@ -22,7 +22,7 @@
         --search-bar: #242526;
     }
     body{
-        background-image: var(--body-anime);
+        background-image: url('../image/770659.jpg');
         background-size: cover;
     }
     .mikupic{

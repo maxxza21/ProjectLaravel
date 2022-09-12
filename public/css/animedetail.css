@@ -6,6 +6,49 @@ body{
 a{
     text-decoration: none;
 }
+:root{
+    --body-color: #fff;
+    --detail-color:#010718;
+    --topic-color:#fff;
+    --information-color:#9295a4;
+    --nav-color: #2e51a2;
+    --card-color: #2b2e3b;
+    --nav-bottom: #2e51a2;
+    --myanime-color:#dde1ec;
+    --widget-color:#2e51a2;
+    --side-nav: #010718;
+    --text-color: #FFF;
+    --search-bar: #F2F2F2;
+    --search-text: #010718;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--detail-color) !important;
+    background-image: var(--detail-color) !important;
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: 100%;
+}
+
+body.dark{
+    --body-color: url(../image/miku.jpg);
+    --detail-color: url(../image/girl.jpg);
+    --topic-color: black;
+    --information-color:black;
+    --card-color: 7px 7px 60px #000;
+    --nav-color: linear-gradient(-135deg,#87e5cf, #5a676b, #47c8c0, #ff629d, #55d1d0,#e2ddcc,#ff1688);
+    --boxshadow-color: 7px 7px 60px #000;
+    --myanime-color:#00BCD4;
+    --widget-color: 10px 10px 60px #000;
+    --nav-bottom: #00BCD4;
+    --side-nav: #242526;
+    --text-color: #ff9c00;
+    --search-bar: #87e5cf;
+}
+
+/* left content */
+
 .box-left.anime{
     max-width: 230px;
     display: inline-block;
@@ -28,7 +71,8 @@ a{
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #2b2e3b;
+    background-color: var(--card-color);
+    box-shadow: var(--card-color);
     background-clip: border-box;
     border: 0 solid #343747;
     border-radius: 0.25rem;
@@ -41,7 +85,8 @@ a{
     vertical-align: top;
 }
 .text-information{
-    color: #9295a4;
+    color: var(--information-color);
+    transition: all 0.4s ease;
 }
 .mt-2{
     margin-top: 0.5rem!important;
@@ -71,5 +116,16 @@ a{
     color: #9295a4;
 }
 .contributor{
-    color: #f6f6f6;
+    color: var(--topic-color);
+}
+.text-white{
+    color: var(--topic-color) !important;
+    transition: all 0.4s ease;
+}
+
+/* media */
+@media (min-width: 1200px){
+.d-xl-block {
+    display: block!important;
+}
 }
