@@ -23,7 +23,8 @@
     }
     body{
         background-image: url('../image/770659.jpg');
-        background-size: cover;
+        background-size: auto;
+        
     }
     .mikupic{
         width: 100%;
@@ -31,6 +32,12 @@
     .contentpic{
         width: 100%;
         height: auto;
+    }
+    .searchToggle.active ~ .search-field{
+        bottom: -110px !important;
+    }
+    .darkLight-searchBox .dark-light, .darkLight-searchBox .searchToggle{
+        margin: 5px 5px !important;
     }
     .textbg{
         background-color: #2b2e3b;
@@ -50,7 +57,7 @@
         margin: 47px auto;
        
     }
-    form{
+    .box{
         width: 96%;
         height: 100%;
         margin: auto;
@@ -64,7 +71,7 @@
     }
     form div{
         height: 60px;
-        margin: 31px auto;
+        margin: 51px auto;
         padding: 5px;
     }
     form .pr{

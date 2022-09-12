@@ -14,6 +14,7 @@
 :root{
     --body-colors: #FFF;
     --nav-color: #4070F4;
+    --nav-color2: #4070F4;
     --side-nav: #010718;
     --text-color: #FFF;
     --search-bar: #F2F2F2;
@@ -28,6 +29,7 @@ body{
 body.dark{
     --body-colors: #18191A;
     --nav-color: #242526;
+    --nav-color2: #242526;
     --side-nav: #242526;
     --text-color: #CCC;
     --search-bar: #242526;
@@ -38,7 +40,7 @@ nav{
     left: 0;
     height: 70px;
     width: 100%;
-    background-color: var(--nav-color);
+    background-color: var(--nav-color2);
     z-index: 100;
 }
 
@@ -52,7 +54,7 @@ nav .nav-bar{
     height: 100%;
     max-width: 1000px;
     width: 100%;
-    background-color: var(--nav-color);
+    background-color: var(--nav-color2);
     margin: 0 auto;
     padding: 0 30px;
     display: flex;
@@ -195,6 +197,7 @@ nav .nav-bar .logo a{
     bottom: -74px;
     opacity: 1;
     pointer-events: auto;
+    z-index:999999;
 }
 
 .search-field::before{
@@ -236,6 +239,16 @@ body.dark .search-field input{
 
 body.dark .search-field i{
     color: var(--text-color);
+}
+.navbutton{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    background: #fff;
+    cursor: pointer;
 }
 
 @media (max-width: 790px) {

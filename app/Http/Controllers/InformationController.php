@@ -5,21 +5,27 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use App\Models\Manga;
+use Illuminate\Support\Facades\DB;
 
 class InformationController extends Controller
 {
     // data
     public function data(){
-        $data['mangas'] = Manga::orderBy('id', 'desc')->paginate(5);
+        $data['mangas'] = Manga::orderBy('id', 'desc')->paginate(4);
         return view('Anipost.information', $data);
     }
+
     // detele
+    // public function delete(){
+    //     $mangas = DB::delete('delete from mangas where id=?', [$id]);
+    //     return redirect('Anipost/information')->with('success', 'delete successfully!');
+    // }
     public function delete($id){
      $data = Manga::find($id);
      $data->delete();
      return redirect('Anipost/information')->with('success', 'delete successfully!');
     }
-    // edit
+    //edit
     public function edit($id){
         $mangas = Manga::find($id);
         return view('Anipost.edit', compact('mangas'));
@@ -53,6 +59,11 @@ class InformationController extends Controller
         
         $mangas->update();
         return redirect('Anipost/edit/'. $id)->with('alert', 'Update Successfully');
+    }
+    public function search2(Request $request){
+        $search = $request->get('search');
+        $mangas = DB::table('mangas')->where('name', 'like', '%' .$search. '%')->paginate(5);
+        return view('Anipost.information', ['mangas' => $mangas]);
     }
    
 }

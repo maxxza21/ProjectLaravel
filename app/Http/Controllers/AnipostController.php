@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Manga;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 
 class AnipostController extends Controller
@@ -14,7 +15,6 @@ class AnipostController extends Controller
         // $data = Manga::all();
         return view('Anipost.index', $data);
     }
-
 
     // check information
     public function check(){
@@ -39,7 +39,17 @@ class AnipostController extends Controller
       public function detail(){
         return view('Anipost.animedetail');
     }
- 
+
+    //search
+    public function searchpage(){
+        return view('Anipost.search');
+    }
+    public function search(Request $request){
+        $search = $request->get('search');
+        $mangas = DB::table('mangas')->where('name', 'like', '%' .$search. '%')->paginate(5);
+        return view('Anipost.search', ['mangas' => $mangas]);
+    }
+    
 }
 
 

@@ -12,8 +12,9 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
 </head>
 <body>
+	@include('Anipost.header')
 	<div class="container">
-        @include('Anipost.header')
+      
 		<div class="contact-box">
 			<div class="left"></div>
 			<div class="right">

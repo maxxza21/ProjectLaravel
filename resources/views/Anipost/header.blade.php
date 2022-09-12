@@ -26,17 +26,16 @@
                 <i class='bx bx-sun sun'></i>
             </div>
 
-            <div class="searchBox">
-                <div class="searchToggle">
-                    <i class='bx bx-x cancel'></i>
-                    <i class='bx bx-search search'></i>
+            <form action="{{route('web.search')}}" method="GET">
+                <div class="searchBox">
+                  <div class="searchToggle"><i class='bx bx-x cancel'></i><i class='bx bx-search search'></i></div>
+                  <div class="search-field"><input type="text" id="image" name="search" placeholder="Search..."><button style="border: none;"><i class='bx bx-search' style="margin-top: -10px;"></i></button>
+                  <div class="searchbar" id="searchresult"></div>
+           
+                  </div>
                 </div>
-
-                <div class="search-field">
-                    <input type="text" placeholder="Search...">
-                    <i class='bx bx-search'></i>
-                </div>
-            </div>
+                
+                </form>
         </div>
     </div>
 </nav>

@@ -12,6 +12,7 @@
     --text-color: #FFF;
     --search-bar: #F2F2F2;
     --search-text: #010718;
+    --h2-color:black;
 }
 
 body{
@@ -36,6 +37,7 @@ body.dark{
     --side-nav: #242526;
     --text-color: #ff9c00;
     --search-bar: #87e5cf;
+    --h2-color:#fff;
 }
 
 /* content */
@@ -59,3 +61,6 @@ body.dark{
     a{
         text-decoration: none;
     }
+h2{
+    color: var(--h2-color);
+}

@@ -9,19 +9,59 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="{{url('css/upload.css')}}">
     <link rel="stylesheet" href="{{url('css/input.css')}}">
-   
+    <link rel="stylesheet" href='{{url('css/header.css')}}'>
     <title>Document</title>
 </head>
 <body>
-    @include('Anipost.header')
+    
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen'></i>
+            <span class="logo navLogo"><a href="#"><img src="{{url('image/AniROOM.png')}}" alt=""
+                        style="width:170px; height:auto;"></a></span>
+    
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">CodingLab</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+    
+                <ul class="nav-links">
+                    <li><a href="{{url('/Anipost')}}">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="{{url('/Anipost/information')}}">Information</a></li>
+                    <li><a href="{{ route('uploads')}}">Upload</a></li>
+                    <li><a href="{{url('/Anipost/contact')}}">Contact</a></li>
+                </ul>
+            </div>
+    
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+    
+                <form action="{{route('web.search')}}" method="GET">
+                    <div class="searchBox">
+                      <div class="searchToggle"><i class='bx bx-x cancel'></i><i class='bx bx-search search'></i></div>
+                      <div class="search-field"><input type="text" id="image" name="search" placeholder="Search..."><button class="navbutton" style="border: none;"><i class='bx bx-search' style="margin-top: -10px;"></i></button>
+                      <div class="searchbar" id="searchresult"></div>
+               
+                      </div>
+                    </div>
+                    
+                    </form>
+            </div>
+        </div>
+    </nav>
     <h2 style="text-align: center; margin-top: 20px;">Edit Manga</h2>
-    <div class="container" style="height: 1000px;">
-    <section>
+    <div class="container" style="height: 1200px;">
+    <section class="col-lg-10 col-md-10 col-sm-10">
        
           
            
       
-        <form action="{{url('Anipost/update/'. $mangas->id)}}" method="POST" enctype="multipart/form-data">
+        <form class="box" action="{{url('Anipost/update/'. $mangas->id)}}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
           
@@ -66,6 +106,7 @@
         <div>
             <input type="file" id="upload" name="picture" value="{{$mangas->picture}}" style="display: none;" >
             <label for="upload" value="{{$mangas->picture}}" >{{$mangas->picture}}</label>
+            
         </div>
         <button type="submit"><span>&#8682; Update</span><span class="uploading">Upload.....</span></button>
         <button class="cancle">Cancle Upload</button>

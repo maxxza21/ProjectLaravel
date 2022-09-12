@@ -151,8 +151,7 @@
             <div class="tab-pane active" id="home1" role="tabpanel">
                 <div class="card">
                     <div class="card-body p-3">
-                        <div style="float: right; margin-right: 0em;"><button class="btn btn-sm btn-light"><i
-                                    class="mdi mdi-sort-variant"></i></button></div>
+                        
                                     <h4 class="chapter-title"><i class="bx bx-list-ol"></i> Chapter List</h4> <br
                                     style="clear: both; line-height: 100%;">
                         <div class="row g-3">

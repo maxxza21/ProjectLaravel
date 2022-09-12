@@ -26,10 +26,12 @@
                         <img class="contentpic" src="{{asset('image/'.$item->picture)}}" alt="">
                         <div class="mb-0 pt-2 textbg">
                             <p style="margin-left: 11px;"> {{$item->name}}</p>
+                            <p style="font-size:12px; margin:-5px 0 0 12px; color:#9295a4;">ตอนที่ Coming soon</p>
                            
                         </div>
                         </a>
                     </div>
+                 
                     @endif
                     @endforeach
                     {!! $mangas->links('pagination::bootstrap-5') !!}
