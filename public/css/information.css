@@ -22,7 +22,22 @@ body{
     background-size: auto;
    
 }
-
+li{
+    list-style: none;
+}
+.login{
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-left: 20px;
+    padding-right: 10px;
+}
+.registor{
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-right: 20px;
+}
 body.dark{
     --body-color: url(../image/okayu.jpg);
     --detail-color: url(../image/girl.jpg);

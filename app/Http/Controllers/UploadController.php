@@ -33,6 +33,7 @@ class UploadController extends Controller
     $picture->artist = $request->input('artist');
     $picture->website = $request->input('website');
     $picture->synopsis = $request->input('synopsis');
+    $picture->contributor = $request->input('contributor');
     if($request->hasfile('picture')){
         $file = $request->file('picture');
         $extension = $file->getClientOriginalExtension();

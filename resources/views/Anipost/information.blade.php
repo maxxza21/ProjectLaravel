@@ -9,6 +9,9 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
         <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="http://127.0.0.1:5173/resources/sass/app.scss"/> 
         <link rel="stylesheet" href="{{url('css/information.css')}}">
         <link rel="stylesheet" href='{{url('css/header.css')}}'>
     <title>Laravel CRUD Index</title>
@@ -28,7 +31,7 @@
                 </div>
     
                 <ul class="nav-links">
-                    <li><a href="{{url('/Anipost')}}">Home</a></li>
+                    <li><a href="{{url('/Anipost/admin')}}">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="{{url('/Anipost/information')}}">Information</a></li>
                     <li><a href="{{ route('uploads')}}">Upload</a></li>
@@ -52,6 +55,25 @@
                     </div>
                     
                     </form>
+                    @if(Auth::check())
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }}
+                        </a>
+    
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                    @else
+                    <a href="{{route('home')}}"><p style="color: red; padding-right:5px;">login</p></a>
+                    <a href="{{url('/register')}}"><p style="color: red">registor</p></a>
+                    @endif
             </div>
         </div>
     </nav>
@@ -126,4 +148,5 @@
     </div>
 </body>
 <script src="{{url('js/header.js')}}"></script>
+<script type="module" src="http://127.0.0.1:5173/resources/js/app.js"></script>
 </html>

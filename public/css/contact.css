@@ -111,7 +111,22 @@ textarea{
     border: 2px solid rgba(30,85,250,0.47);
     background-color: #fff;
 }
-
+li{
+    list-style: none;
+}
+.login{
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-left: 20px;
+    padding-right: 10px;
+}
+.registor{
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-right: 20px;
+}
 .nav{
     text-decoration: none;
     padding-right: 5px;

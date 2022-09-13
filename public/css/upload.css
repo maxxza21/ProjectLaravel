@@ -47,6 +47,9 @@
         line-height: 100%;
         padding-bottom: 3px;
     }
+    li{
+        list-style: none;
+    }
     .text{
         font-size: 20px;
         margin-top: -20px;
@@ -55,7 +58,7 @@
         width: 1000px;
         height:auto;
         margin: 47px auto;
-       
+    
     }
     .box{
         width: 96%;
@@ -173,4 +176,17 @@
     }
     .form-control{
         width: 90% !important;
+    }
+    .login{
+        font-size: 17px;
+        font-weight: 400;
+        color: var(--text-color);
+        margin-left: 20px;
+        padding-right: 10px;
+    }
+    .registor{
+        font-size: 17px;
+        font-weight: 400;
+        color: var(--text-color);
+        margin-right: 20px;
     }

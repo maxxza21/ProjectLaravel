@@ -6,6 +6,11 @@ use App\Models\Manga;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+use Hash;
+use Session;
+use App\Models\User;
+
 
 
 class AnipostController extends Controller
@@ -31,7 +36,7 @@ class AnipostController extends Controller
    public function contact(){
     return view('Anipost.contact');
    }
-
+     
    // redirect
    public function redirect(){
     return redirect('Anipost');
@@ -50,7 +55,31 @@ class AnipostController extends Controller
         $mangas = DB::table('mangas')->where('name', 'like', '%' .$search. '%')->paginate(5);
         return view('Anipost.search', ['mangas' => $mangas]);
     }
-    
+    // user page
+    public function user(){
+        $data['mangas'] = Manga::orderBy('id', 'desc')->paginate(12);
+        return view('Anipost.admin', $data);
+    }
+    // public function userindex(){
+    //     return view('Anipost.user');
+    // }
+        public function adminpage(){
+            return view('Anipost.admin');
+        }
+ 
+    public function usercheck()
+    {
+        if(Auth::check()){
+            $data['mangas'] = Manga::orderBy('id', 'desc')->paginate(12);
+            return view('Anipost.admin',$data);
+        }else{
+  
+        return redirect("login")->withSuccess('You are not allowed to access');
+        }
+    }
+
 }
+
+
 
 

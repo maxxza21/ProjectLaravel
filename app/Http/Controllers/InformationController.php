@@ -15,6 +15,11 @@ class InformationController extends Controller
         $data['mangas'] = Manga::orderBy('id', 'desc')->paginate(4);
         return view('Anipost.information', $data);
     }
+    
+    // view
+    public function show(){
+        return view('Anipost.information');
+    }
 
     // detele
     // public function delete(){

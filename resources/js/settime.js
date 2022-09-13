@@ -1,0 +1,1 @@
+setTimeout(function(){window.location='Anipost/user'}, 2000);

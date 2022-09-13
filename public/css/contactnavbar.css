@@ -51,7 +51,19 @@ body{
     background-repeat: repeat;
     background-size: cover;
 }
-
+.login{
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-left: 20px;
+    padding-right: 10px;
+}
+.registor{
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-right: 20px;
+}
 body.dark{
     --body-color: url(../image/miku.jpg);
     --nav-color: linear-gradient(-135deg,#87e5cf, #5a676b, #47c8c0, #ff629d, #55d1d0,#e2ddcc,#ff1688);
@@ -63,7 +75,9 @@ body.dark{
     --text-color: #ff9c00;
     --search-bar: #87e5cf;
 }
-
+li{
+    list-style: none;
+}
 nav{
     top: 0;
     left: 0;
@@ -271,7 +285,7 @@ body.dark .search-field i{
 @media (max-width: 992px){
     .logo{
         width: 8% !important;
-        position: absolute;
+    
         left: 80%;
         top: 30px;
     }

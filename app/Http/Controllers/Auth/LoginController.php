@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -53,5 +54,15 @@ class LoginController extends Controller
         }else{
             return redirect()->route('login')->with('error', 'Email-address and Password are wrong.');
         }
+    }
+    // public function protect(Request $request){
+    //     $name = $request->$session()->get('name');
+    //     $capsule = array('name' => $name);
+    //     return view('Anipost.user')->with($capsule);
+    // }
+    public function username()
+    {
+        $user = Auth::user();
+        return view('Anipost.user', $user);
     }
 }

@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('status');
             $table->string('website')->nullable();
             $table->string('synopsis')->nullable();
+            $table->string('contributor');
             $table->timestamps();
         });
     }
