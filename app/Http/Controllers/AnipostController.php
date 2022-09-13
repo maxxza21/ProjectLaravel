@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Manga;
+use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 

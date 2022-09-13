@@ -100,7 +100,7 @@
             </div>
             <div class="form-group">
                 <p class="text">Synopsis</p>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" type="text" name="synopsis" value="{{$mangas->synopsis}}"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" type="text" name="synopsis" value="{{$mangas->synopsis}}">{{$mangas->synopsis}}</textarea>
             </div>
         <p>Upload file</p>
         <div>

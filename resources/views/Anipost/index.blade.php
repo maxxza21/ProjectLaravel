@@ -17,7 +17,7 @@
         </div>
         <div class="row">
             <div class="col-12 col-lg-9 mb-3">
-                <h2>Comic</h2>
+                <h2 style="border-bottom: 1px solid #bebebe;">Comic</h2>
                 <div class="row mt-2 px-2">
              @foreach ($mangas as $item)
              @if($item->status == "On Going")

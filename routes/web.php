@@ -6,6 +6,7 @@ use App\Http\Controllers\UploadController;
 use App\Http\Controllers\AnimedetailController;
 use App\Http\Controllers\InformationController;
 use App\Http\Controllers\InformationSearchController;
+use App\Http\Controllers\HomeController;
 
 // page route
 
@@ -53,3 +54,10 @@ Route::get('/', [AnipostController::class, 'redirect']);
 // Route::get('/Anipost', function () {
 //     return view('Anipost');
 // });
+Auth::routes();
+
+//login and registor
+
+Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
